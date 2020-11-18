@@ -67,7 +67,7 @@ $(document).ready(function() {
                 </div>
                 <div class="modal-body">
                     <h4 class="card-title">${restDetails.rName}</h4>
-                    <p class="card-text">${restDetails.rType}</p>
+                    <p class="card-text">Restaurant Type: ${restDetails.rType}</p>
                     <p class="card-text">AVG Cost: ${restDetails.avgCost}</p>
                     <p class="card-text">Address: ${restDetails.rAddress}</p>
                     <p class="card-text">Rating for service: ${restDetails.ratingForService} </span><span class="fa fa-star"></span></p>
