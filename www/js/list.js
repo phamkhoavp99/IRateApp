@@ -31,8 +31,6 @@ function loadHome() {
         }
     }
 }
-
-
 $(window).on("load", function() {
     loadHome()
 });
@@ -86,11 +84,12 @@ $(document).ready(function() {
             $('#details').empty().append(html)
         }
     })
-    $(document).on('submit', '#addRate', function() {
+    $(document).on('submit', '#addRate', function()  { 
         const data = {
             rOwnerRate: $('#rOwnerRate').val(),
             rName: $('#rName').val(),
             rType: $('#rType').val(),
+            rAddress:$('#rAddress').val(),
             date_time: $('#date_time').val(),
             avgCost: $('#avgCost').val(),
             ratingForService: $('#ratingForService').val(),

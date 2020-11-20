@@ -77,7 +77,7 @@ function loadAllData(collectionName) {
 function addRate(collectionName, data) {
     const newRate = rateResDB.transaction([collectionName], "readwrite").objectStore(collectionName).add(data)
     newRate.onsuccess = () => {
-        // window.localStorage = "#feedback"
+
         $('#addRate').each(function() {
             this.reset()
         })
