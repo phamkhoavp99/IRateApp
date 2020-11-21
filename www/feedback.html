@@ -8,8 +8,6 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald|Pontano+Sans' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 
     <!--===============================================================================================-->
@@ -76,56 +74,56 @@
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
                         <span class="label-input100">Date and time of the visit</span>
-                        <input class="input100" type="date" id="date_time" name="date_time" placeholder="Enter Date and time of the visit" required>
+                        <input class="input100" type="datetime-local" id="date_time" name="date_time" placeholder="Enter Date and time of the visit" required>
                         <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
                         <span class="label-input100">Average meal price per person</span>
-                        <input class="input100" type="text" id="avgCost" name="avgCost" placeholder="Enter Average meal price per person" required>
+                        <input class="input100" type="number" id="avgCost" name="avgCost" placeholder="Enter Average meal price per person" required>
                         <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
                         <span class="label-input100">Image</span>
-                        <input class="input100" type="file" id="image" name="image" placeholder="Enter Image" >
+                        <input class="input100" type="file"  placeholder="Enter Image" >
                         <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 input100-select">
-                        <span class="label-input100">Service rating (by stars)</span>
+                        <span class="label-input100">Service rating (Choose Star to Rate)</span>
                         <div>
-                            <select class="selection-2" id="ratingForService" name="ratingForService" required>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                            <select class="selection-2" id="ratingForService" name="ratingForService"  required>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 input100-select">
-                        <span class="label-input100">Cleanliness rating (by stars)</span>
+                        <span class="label-input100">Cleanliness rating (Choose Star to Rate)</span>
                         <div>
                             <select class="selection-2" id="ratingForClean" name="ratingForClean" required>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
                         <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 input100-select">
-                        <span class="label-input100">Food quality rating (by stars)</span>
+                        <span class="label-input100">Food quality rating</span>
                         <div>
                             <select class="selection-2" id="ratingForFood" name="ratingForFood" required>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
                         </div>
                         <span class="focus-input100"></span>
                     </div>
@@ -156,6 +154,9 @@
 
         <div id="dropDownSelect1"></div>
     </div>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
     <!--===============================================================================================-->
     <script src="vendor/jquery/jquery-3.2.1.min.js"></script>

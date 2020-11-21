@@ -5,9 +5,8 @@ function loadHome() {
         for (var i in results.reverse()) {
             let html = `
             <li>
-                <div class="col-md-4 mb-3">
-                    <div class="row">
-                    <div class="col">
+                <div class="d-flex col-md-4 mb-3" >
+                    <div class="p-2">
                         <a rateId="${results[i].id}" href="#detailPage" id="detail_rate">
                             <img src="${results[i].image}" style="width: 150px; height: 100px"> 
                         </a>
@@ -15,11 +14,10 @@ function loadHome() {
                         <button class="btn btn-outline-danger" type="button" rateId="${results[i].id}" id="delete_rate"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                         <button class="btn btn-outline-info" type="button" rateId="${results[i].id}" id="detail_rate" data-toggle="modal" data-target="#details"><i class="fa fa-eye" aria-hidden="true"></i></button>
                     </div>
-                    <div class="col" >
+                    <div class="p-2" >
                         <h1 style="text-align: left;">${results[i].rName}</h1><br>
                         <p>AVG Cost: ${results[i].avgCost}</p>
                         <p>Type: ${results[i].rType}</p>
-                        <p>Address: ${results[i].rAddress}</p>
                         <p>AVG Rating: <span>${parseFloat((Number(results[i].ratingForClean) + Number(results[i].ratingForFood) + Number(results[i].ratingForService)) / 3).toFixed(1)}</span><span class="fa fa-star"></span></p>
                     </div>
                 </div>
@@ -27,7 +25,6 @@ function loadHome() {
             </li>
             `
             $('#searchPage').append(html);
-
         }
     }
 }
@@ -63,7 +60,8 @@ $(document).ready(function() {
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" style="word-wrap: break-word;">
+                    <img src="${restDetails.image}" style="max-width:400px; width:100%; height: auto;"></img>
                     <h4 class="card-title">${restDetails.rName}</h4>
                     <p class="card-text">Restaurant Type: ${restDetails.rType}</p>
                     <p class="card-text">AVG Cost: ${restDetails.avgCost}</p>
@@ -96,6 +94,7 @@ $(document).ready(function() {
             ratingForClean: $('#ratingForClean').val(),
             ratingForFood: $('#ratingForFood').val(),
             notes: $('#notes').val(),
+            image: 'https://cdn.iconscout.com/icon/free/png-256/restaurant-1495593-1267764.png'
         }
         addRate('RRDB', data)
         return false
